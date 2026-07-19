@@ -2,6 +2,9 @@ import json,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 class Scaffold(unittest.TestCase):
+ def test_single_canonical_ml_roadmap(self):
+  self.assertTrue((ROOT/'ML_PROJECT_ROADMAP.md').is_file())
+  self.assertFalse((ROOT/'PROJECT_ROADMAP.md').exists())
  def test_schema_contract(self):
   s=json.loads((ROOT/'reports/experiment_ledger.schema.json').read_text())
   self.assertEqual(s['schema_vocabulary'],'bundled-classical-v2')

@@ -48,7 +48,7 @@
     },
     {
       "target_path": "tools/validate_orchestration.py",
-      "target_sha256": "646b016f5cf1a1cb2fca3c2f0a6314f535abb5ea3cd1bb7b862b7d36ee461d6c",
+      "target_sha256": "2f2f05935d5e1e0f5affe2cb2ff6db71ff68ae6b862d10c0f419bd748fb23c26",
       "core_path": "tools/validate_orchestration.py",
       "core_sha256": "1c9f1b1e0eddb845075210dfa6be2eb9e1f7aed3d84da228dfac7fd7fa31b32b",
       "relationship": "adapted"

@@ -7,7 +7,7 @@ def main(argv=None):
  p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT);p.add_argument('--write-manifest',action='store_true');a=p.parse_args(argv); root=a.root.resolve(); errors=[]
  adapter=(root/'orchestration.lock.json').is_file()
  if adapter:
-  required=['AGENTS.md','ML_PROJECT_ROADMAP.md','PROJECT_LOG.md','PROJECT_ROADMAP.md','orchestration.lock.json','tools/agent_ledger.py','tools/validate_core_pin.py','tools/experiment_ledger.py','reports/agent_execution_ledger.schema.json','reports/agent_execution_ledger.jsonl','reports/experiment_ledger.schema.json','reports/experiment_ledger.jsonl','core/orchestration_lock.schema.json','docs/agent_orchestration.md','docs/classical_ml_adapter.md']
+  required=['AGENTS.md','ML_PROJECT_ROADMAP.md','PROJECT_LOG.md','orchestration.lock.json','tools/agent_ledger.py','tools/validate_core_pin.py','tools/experiment_ledger.py','reports/agent_execution_ledger.schema.json','reports/agent_execution_ledger.jsonl','reports/experiment_ledger.schema.json','reports/experiment_ledger.jsonl','core/orchestration_lock.schema.json','docs/agent_orchestration.md','docs/classical_ml_adapter.md']
  else: required=REQUIRED
  for x in required:
   if not (root/x).exists(): errors.append('missing '+x)

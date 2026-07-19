@@ -63,3 +63,19 @@ unavailable. See `reports/umbrella_superchat_smoke.md`.
 Supervisor accepted the umbrella smoke in event
 `ffca0da0-8fb2-4c88-81fd-e4597e13e57c`. Automatic sync apply remains deferred
 technical debt; dataset audit is still gated.
+## 2026-07-19 — Classical ML roadmap consolidation
+
+Made `ML_PROJECT_ROADMAP.md` the sole canonical roadmap and removed the
+duplicate `PROJECT_ROADMAP.md`. No dataset was selected and no ML, data,
+download, or model operation ran.
+
+`python tests/test_classical_scaffold.py -v` passed 3/3. The first isolated
+self-contained validation exposed the expected pin mismatch after the
+intentional one-line local validator override. With supervisor authorization,
+only that validator's target SHA-256 was updated in
+`orchestration.lock.json`; Core version, commit, path, source hash, and
+`adapted` relationship remain unchanged. The isolated validator suite then
+passed 1/1. Local orchestration, Core pin, agent ledger, empty experiment
+ledger, roadmap contradiction scan, and `git diff --check` passed.
+
+Decision: hand off dirty for supervisor acceptance; no commit or push.
