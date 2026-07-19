@@ -1,0 +1,153 @@
+{
+  "dataset": {
+    "name": "UCI Online Shoppers Purchasing Intention Dataset",
+    "uci_id": 468,
+    "source_url": "https://archive.ics.uci.edu/static/public/468/online+shoppers+purchasing+intention+dataset.zip",
+    "documentation_url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+    "license": "CC BY 4.0",
+    "file": "online_shoppers_intention.csv",
+    "sha256": "b3055ee355f59134d851d32641183cb4a8b45def7124d2f50442a042f358e0d9"
+  },
+  "shape": {
+    "rows": 12330,
+    "column_count": 18,
+    "columns": [
+      "Administrative",
+      "Administrative_Duration",
+      "Informational",
+      "Informational_Duration",
+      "ProductRelated",
+      "ProductRelated_Duration",
+      "BounceRates",
+      "ExitRates",
+      "PageValues",
+      "SpecialDay",
+      "Month",
+      "OperatingSystems",
+      "Browser",
+      "Region",
+      "TrafficType",
+      "VisitorType",
+      "Weekend",
+      "Revenue"
+    ]
+  },
+  "storage_types": {
+    "csv": "all fields are strings on disk; semantic roles below"
+  },
+  "semantic_types": {
+    "integer": [
+      "Administrative",
+      "Informational",
+      "ProductRelated",
+      "OperatingSystems",
+      "Browser",
+      "Region",
+      "TrafficType"
+    ],
+    "continuous": [
+      "Administrative_Duration",
+      "Informational_Duration",
+      "ProductRelated_Duration",
+      "BounceRates",
+      "ExitRates",
+      "PageValues",
+      "SpecialDay"
+    ],
+    "categorical": [
+      "Month",
+      "VisitorType",
+      "Weekend",
+      "Revenue"
+    ]
+  },
+  "missing_values": {
+    "Administrative": 0,
+    "Administrative_Duration": 0,
+    "Informational": 0,
+    "Informational_Duration": 0,
+    "ProductRelated": 0,
+    "ProductRelated_Duration": 0,
+    "BounceRates": 0,
+    "ExitRates": 0,
+    "PageValues": 0,
+    "SpecialDay": 0,
+    "Month": 0,
+    "OperatingSystems": 0,
+    "Browser": 0,
+    "Region": 0,
+    "TrafficType": 0,
+    "VisitorType": 0,
+    "Weekend": 0,
+    "Revenue": 0
+  },
+  "exact_duplicate_rows": 125,
+  "target": {
+    "column": "Revenue",
+    "values": {
+      "FALSE": 10422,
+      "TRUE": 1908
+    },
+    "positive_class": "TRUE",
+    "positive_rate": 0.15474452554744525
+  },
+  "features": {
+    "included_numeric": [
+      "Administrative",
+      "Administrative_Duration",
+      "Informational",
+      "Informational_Duration",
+      "ProductRelated",
+      "ProductRelated_Duration",
+      "BounceRates",
+      "ExitRates",
+      "SpecialDay"
+    ],
+    "included_categorical": [
+      "Month",
+      "OperatingSystems",
+      "Browser",
+      "Region",
+      "TrafficType",
+      "VisitorType",
+      "Weekend"
+    ],
+    "excluded": {
+      "PageValues": "post-outcome Google Analytics metric"
+    },
+    "prohibited": [
+      "Revenue",
+      "PageValues"
+    ]
+  },
+  "split": {
+    "strategy": "random",
+    "algorithm": "Python random.Random; independently shuffle target-pure groups of identical non-target features in sorted label order; choose whole groups summing to round(class_count * 0.20) for test",
+    "seed": 20260719,
+    "test_fraction": 0.2,
+    "stratified_by": "Revenue",
+    "train_rows": 9864,
+    "test_rows": 2466,
+    "class_counts": {
+      "FALSE": {
+        "total": 10422,
+        "test": 2084,
+        "train": 8338
+      },
+      "TRUE": {
+        "total": 1908,
+        "test": 382,
+        "train": 1526
+      }
+    },
+    "feature_identical_groups": 12205,
+    "mixed_target_groups": 0,
+    "train_fingerprint_sha256": "bf86c7bcedc2636d892f4a567d364b04625ae7f8419e177a5e012e7083802d86",
+    "test_fingerprint_sha256": "88192976cbf6bcfef812ec1e474b21a019e6f101846701118b2e60070f1ed649",
+    "membership_path": "data/frozen_splits/online_shoppers_conversion_v1_membership.csv"
+  },
+  "runtime": {
+    "python_version": "3.14.2",
+    "executor": "audit/online_shoppers_audit.py"
+  }
+}

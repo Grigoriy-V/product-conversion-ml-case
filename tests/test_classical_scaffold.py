@@ -1,4 +1,4 @@
-import json,unittest
+import json,subprocess,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 class Scaffold(unittest.TestCase):
@@ -15,5 +15,8 @@ class Scaffold(unittest.TestCase):
   self.assertFalse(p['additionalProperties'])
   self.assertEqual(p['properties']['managed_files']['minItems'],13)
  def test_no_data_or_model(self):
-  self.assertFalse(any(p.name.endswith(('.csv','.parquet','.pkl','.joblib')) for p in ROOT.rglob('*') if p.is_file()))
+  tracked=subprocess.run(['git','-C',str(ROOT),'ls-files','-z'],check=True,capture_output=True).stdout.decode('utf-8').split('\0')
+  tracked=[path for path in tracked if path]
+  forbidden=[path for path in tracked if path.startswith(('data/','outputs/','artifacts/','models/')) or path.endswith(('.csv','.parquet','.pkl','.joblib'))]
+  self.assertEqual(forbidden,[],f'tracked data/model/artifact files are forbidden: {forbidden}')
 if __name__=='__main__':unittest.main()

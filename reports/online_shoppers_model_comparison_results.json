@@ -1,0 +1,172 @@
+{
+  "models": {
+    "logistic_regression": {
+      "per_fold": [
+        {
+          "average_precision": 0.31991778703332774,
+          "balanced_accuracy_default_decision_rule": 0.5038595353225617,
+          "fold": 0,
+          "roc_auc": 0.7414278413334905
+        },
+        {
+          "average_precision": 0.31559598550943363,
+          "balanced_accuracy_default_decision_rule": 0.5118943424429868,
+          "fold": 1,
+          "roc_auc": 0.7390836586781006
+        },
+        {
+          "average_precision": 0.32907865209215803,
+          "balanced_accuracy_default_decision_rule": 0.5090773283012934,
+          "fold": 2,
+          "roc_auc": 0.7535931910209538
+        },
+        {
+          "average_precision": 0.3646421417429426,
+          "balanced_accuracy_default_decision_rule": 0.512606302268958,
+          "fold": 3,
+          "roc_auc": 0.7560389882807752
+        },
+        {
+          "average_precision": 0.32339745798006037,
+          "balanced_accuracy_default_decision_rule": 0.524552816762983,
+          "fold": 4,
+          "roc_auc": 0.7543617564964422
+        }
+      ],
+      "runtime_seconds": 0.31201450002845377,
+      "summary": {
+        "average_precision": {
+          "mean": 0.33052640487158447,
+          "std": 0.017619657028081576
+        },
+        "balanced_accuracy_default_decision_rule": {
+          "mean": 0.5123980650197566,
+          "std": 0.0068112975396615654
+        },
+        "roc_auc": {
+          "mean": 0.7489010871619525,
+          "std": 0.007141648070782457
+        }
+      }
+    },
+    "random_forest": {
+      "per_fold": [
+        {
+          "average_precision": 0.3683072770046572,
+          "balanced_accuracy_default_decision_rule": 0.5217331053190234,
+          "fold": 0,
+          "roc_auc": 0.7821932617840155
+        },
+        {
+          "average_precision": 0.36631187120626396,
+          "balanced_accuracy_default_decision_rule": 0.5311062377688397,
+          "fold": 1,
+          "roc_auc": 0.771280497998761
+        },
+        {
+          "average_precision": 0.3865191813112665,
+          "balanced_accuracy_default_decision_rule": 0.531128867397885,
+          "fold": 2,
+          "roc_auc": 0.7851771042182648
+        },
+        {
+          "average_precision": 0.3865093738082018,
+          "balanced_accuracy_default_decision_rule": 0.5201763568854857,
+          "fold": 3,
+          "roc_auc": 0.7696695954926661
+        },
+        {
+          "average_precision": 0.38776784283117993,
+          "balanced_accuracy_default_decision_rule": 0.5254707709242442,
+          "fold": 4,
+          "roc_auc": 0.7846719345834808
+        }
+      ],
+      "runtime_seconds": 1.9296495000598952,
+      "summary": {
+        "average_precision": {
+          "mean": 0.37908310923231386,
+          "std": 0.00964460732341516
+        },
+        "balanced_accuracy_default_decision_rule": {
+          "mean": 0.5259230676590956,
+          "std": 0.004577131083332206
+        },
+        "roc_auc": {
+          "mean": 0.7785984788154376,
+          "std": 0.006728527957483608
+        }
+      }
+    }
+  },
+  "protocol": {
+    "allowed_features": [
+      "Administrative",
+      "Administrative_Duration",
+      "Informational",
+      "Informational_Duration",
+      "ProductRelated",
+      "ProductRelated_Duration",
+      "BounceRates",
+      "ExitRates",
+      "SpecialDay",
+      "Month",
+      "OperatingSystems",
+      "Browser",
+      "Region",
+      "TrafficType",
+      "VisitorType",
+      "Weekend"
+    ],
+    "excluded_features": [
+      "Revenue",
+      "PageValues"
+    ],
+    "fold_validation_class_counts": {
+      "0": {
+        "FALSE": 1668,
+        "TRUE": 305
+      },
+      "1": {
+        "FALSE": 1667,
+        "TRUE": 305
+      },
+      "2": {
+        "FALSE": 1668,
+        "TRUE": 305
+      },
+      "3": {
+        "FALSE": 1667,
+        "TRUE": 306
+      },
+      "4": {
+        "FALSE": 1668,
+        "TRUE": 305
+      }
+    },
+    "group_isolation": true,
+    "n_folds": 5,
+    "test_access": "No held-out test row enters X, y, fit, predict, or scoring.",
+    "test_rows_materialized_for_modeling": 0,
+    "train_class_counts": {
+      "FALSE": 8338,
+      "TRUE": 1526
+    },
+    "train_rows": 9864,
+    "unique_train_groups": 9770,
+    "validation_coverage_once": true
+  },
+  "random_forest_config": {
+    "min_samples_leaf": 2,
+    "n_estimators": 200,
+    "n_jobs": -1,
+    "random_state": 20260719
+  },
+  "selection": {
+    "accepted_logistic_average_precision": 0.33052640487158447,
+    "random_forest_absolute_improvement_required": 0.01,
+    "rule": "Select Random Forest only when mean AP is at least accepted logistic AP plus 0.01; otherwise retain Logistic Regression for simplicity.",
+    "selected_model": "random_forest"
+  },
+  "total_runtime_seconds": 2.4445085000479594
+}
