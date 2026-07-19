@@ -33,15 +33,15 @@ CRITICAL_MANAGED_FILES: dict[str, tuple[str, str]] = {
     ".codex/config.toml": (".codex/config.toml", "exact_copy"),
     ".codex/agents/luna_clerk.toml": (
         ".codex/agents/luna_clerk.toml",
-        "exact_copy",
+        "adapted",
     ),
     ".codex/agents/sol_specialist.toml": (
         ".codex/agents/sol_specialist.toml",
-        "exact_copy",
+        "adapted",
     ),
     ".codex/agents/terra_worker.toml": (
         ".codex/agents/terra_worker.toml",
-        "exact_copy",
+        "adapted",
     ),
     "tools/agent_ledger.py": ("tools/agent_ledger.py", "exact_copy"),
     "tools/validate_orchestration.py": (
@@ -62,7 +62,7 @@ CRITICAL_MANAGED_FILES: dict[str, tuple[str, str]] = {
     ),
     "docs/agent_orchestration.md": (
         "docs/agent_orchestration.md",
-        "exact_copy",
+        "adapted",
     ),
     "requirements.txt": ("requirements.txt", "exact_copy"),
     "VERSION": ("VERSION", "exact_copy"),

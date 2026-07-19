@@ -6,7 +6,7 @@
   "managed_files": [
     {
       "target_path": "AGENTS.md",
-      "target_sha256": "ad61e3f8dd05363d66d0b1976660a91d0802e083c9d5a09114097be6e5c47458",
+      "target_sha256": "c3c15b9f655509107addde06a520b873835b6eefb675d192d813adb5bc69c910",
       "core_path": "AGENTS.md",
       "core_sha256": "64d843bc99e7e1f6591625055a5f3b42fcb30fafef91d5688e4557e14a5d76e1",
       "relationship": "adapted"
@@ -20,24 +20,24 @@
     },
     {
       "target_path": ".codex/agents/luna_clerk.toml",
-      "target_sha256": "a49b7d9c9f9c6958e91761b215e6b85f80aa8b5c673efc732301531075796b51",
+      "target_sha256": "68e2fba76b992694b6698528785c95c47cee6a08f0f7b0b704b6021fe06c9828",
       "core_path": ".codex/agents/luna_clerk.toml",
       "core_sha256": "a49b7d9c9f9c6958e91761b215e6b85f80aa8b5c673efc732301531075796b51",
-      "relationship": "exact_copy"
+      "relationship": "adapted"
     },
     {
       "target_path": ".codex/agents/sol_specialist.toml",
-      "target_sha256": "78351d34a50fea60364d0b864a24f09292c057aec025f187c367c7bddc68d6d2",
+      "target_sha256": "72caf50ba000c76860c282d909ea58d6b17d77c0fea925cf3c7198edb7e3169f",
       "core_path": ".codex/agents/sol_specialist.toml",
       "core_sha256": "78351d34a50fea60364d0b864a24f09292c057aec025f187c367c7bddc68d6d2",
-      "relationship": "exact_copy"
+      "relationship": "adapted"
     },
     {
       "target_path": ".codex/agents/terra_worker.toml",
-      "target_sha256": "441c8cdfe13ea6f875ac56fe1b4afcac53384aed18ae632f4993901a25bc4e60",
+      "target_sha256": "264233e495fdc3b35c48f6e551a366ed2028e7b9e3930573b9d60038fa2167ba",
       "core_path": ".codex/agents/terra_worker.toml",
       "core_sha256": "441c8cdfe13ea6f875ac56fe1b4afcac53384aed18ae632f4993901a25bc4e60",
-      "relationship": "exact_copy"
+      "relationship": "adapted"
     },
     {
       "target_path": "tools/agent_ledger.py",
@@ -76,10 +76,10 @@
     },
     {
       "target_path": "docs/agent_orchestration.md",
-      "target_sha256": "9e69e0e5a5420e01c3f5d47c4b0df46d57e7cc42fde94fc78975a90e13ba2f87",
+      "target_sha256": "2dc53892061c33fd4ce99de95b5f5c786440ee5040fe76e0a7678b41dff86635",
       "core_path": "docs/agent_orchestration.md",
       "core_sha256": "9e69e0e5a5420e01c3f5d47c4b0df46d57e7cc42fde94fc78975a90e13ba2f87",
-      "relationship": "exact_copy"
+      "relationship": "adapted"
     },
     {
       "target_path": "requirements.txt",
