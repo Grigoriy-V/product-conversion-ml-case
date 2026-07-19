@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Core manifest","type":"object","additionalProperties":false,"required":["core_version","owned_files"],"properties":{"core_version":{"type":"string"},"owned_files":{"type":"object","additionalProperties":{"type":"string","pattern":"^[a-f0-9]{64}$"}}}}

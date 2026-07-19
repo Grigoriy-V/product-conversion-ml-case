@@ -1,0 +1,95 @@
+{
+  "schema_vocabulary": "bundled-core-pin-v1",
+  "contract_note": "Machine-readable description only. tools/validate_core_pin.py is the authoritative closed validator and does not claim full JSON Schema Draft support.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "core_repository",
+    "core_version",
+    "core_commit",
+    "adapter_type",
+    "managed_files"
+  ],
+  "properties": {
+    "core_repository": {
+      "const": "human-in-the-loop-ml-orchestration"
+    },
+    "core_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "core_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "adapter_type": {
+      "const": "classical_ml"
+    },
+    "managed_files": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_path",
+          "target_sha256",
+          "core_path",
+          "core_sha256",
+          "relationship"
+        ],
+        "properties": {
+          "target_path": {
+            "enum": [
+              "AGENTS.md",
+              ".codex/config.toml",
+              ".codex/agents/luna_clerk.toml",
+              ".codex/agents/sol_specialist.toml",
+              ".codex/agents/terra_worker.toml",
+              "tools/agent_ledger.py",
+              "tools/validate_orchestration.py",
+              "reports/agent_execution_ledger.schema.json",
+              "core/task_spec.schema.json",
+              "core/project_manifest.schema.json",
+              "docs/agent_orchestration.md",
+              "requirements.txt",
+              "VERSION"
+            ]
+          },
+          "target_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "core_path": {
+            "enum": [
+              "AGENTS.md",
+              ".codex/config.toml",
+              ".codex/agents/luna_clerk.toml",
+              ".codex/agents/sol_specialist.toml",
+              ".codex/agents/terra_worker.toml",
+              "tools/agent_ledger.py",
+              "tools/validate_orchestration.py",
+              "reports/agent_execution_ledger.schema.json",
+              "core/task_spec.schema.json",
+              "core/project_manifest.schema.json",
+              "docs/agent_orchestration.md",
+              "requirements.txt",
+              "VERSION"
+            ]
+          },
+          "core_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "relationship": {
+            "enum": [
+              "exact_copy",
+              "adapted"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

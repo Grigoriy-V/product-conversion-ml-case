@@ -1,0 +1,17 @@
+.codex/*
+!.codex/config.toml
+!.codex/agents/
+!.codex/agents/*.toml
+.agents/
+__pycache__/
+*.py[cod]
+.venv/
+data/
+outputs/
+artifacts/
+models/
+*.csv
+*.parquet
+*.joblib
+*.pkl
+reports/*.jsonl.lock

@@ -1,0 +1,99 @@
+{
+  "core_repository": "human-in-the-loop-ml-orchestration",
+  "core_version": "0.1.0",
+  "core_commit": "14b7c2597d1a7e6c57a4ac8c15d3767338c0a27d",
+  "adapter_type": "classical_ml",
+  "managed_files": [
+    {
+      "target_path": "AGENTS.md",
+      "target_sha256": "ad61e3f8dd05363d66d0b1976660a91d0802e083c9d5a09114097be6e5c47458",
+      "core_path": "AGENTS.md",
+      "core_sha256": "64d843bc99e7e1f6591625055a5f3b42fcb30fafef91d5688e4557e14a5d76e1",
+      "relationship": "adapted"
+    },
+    {
+      "target_path": ".codex/config.toml",
+      "target_sha256": "f9024748bc7c6c32ca83a2b72dfe32959644ec26774815583e83f6847a032d55",
+      "core_path": ".codex/config.toml",
+      "core_sha256": "f9024748bc7c6c32ca83a2b72dfe32959644ec26774815583e83f6847a032d55",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": ".codex/agents/luna_clerk.toml",
+      "target_sha256": "a49b7d9c9f9c6958e91761b215e6b85f80aa8b5c673efc732301531075796b51",
+      "core_path": ".codex/agents/luna_clerk.toml",
+      "core_sha256": "a49b7d9c9f9c6958e91761b215e6b85f80aa8b5c673efc732301531075796b51",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": ".codex/agents/sol_specialist.toml",
+      "target_sha256": "78351d34a50fea60364d0b864a24f09292c057aec025f187c367c7bddc68d6d2",
+      "core_path": ".codex/agents/sol_specialist.toml",
+      "core_sha256": "78351d34a50fea60364d0b864a24f09292c057aec025f187c367c7bddc68d6d2",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": ".codex/agents/terra_worker.toml",
+      "target_sha256": "441c8cdfe13ea6f875ac56fe1b4afcac53384aed18ae632f4993901a25bc4e60",
+      "core_path": ".codex/agents/terra_worker.toml",
+      "core_sha256": "441c8cdfe13ea6f875ac56fe1b4afcac53384aed18ae632f4993901a25bc4e60",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "tools/agent_ledger.py",
+      "target_sha256": "0269109bc0032026cd78b58d4ac5411455aaefdc8f888f9feb048a833b20be31",
+      "core_path": "tools/agent_ledger.py",
+      "core_sha256": "0269109bc0032026cd78b58d4ac5411455aaefdc8f888f9feb048a833b20be31",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "tools/validate_orchestration.py",
+      "target_sha256": "646b016f5cf1a1cb2fca3c2f0a6314f535abb5ea3cd1bb7b862b7d36ee461d6c",
+      "core_path": "tools/validate_orchestration.py",
+      "core_sha256": "1c9f1b1e0eddb845075210dfa6be2eb9e1f7aed3d84da228dfac7fd7fa31b32b",
+      "relationship": "adapted"
+    },
+    {
+      "target_path": "reports/agent_execution_ledger.schema.json",
+      "target_sha256": "d77284e935ccb187e5d77d0bc78536958644dad6cdba26e400ce1e66a4c5b5c1",
+      "core_path": "reports/agent_execution_ledger.schema.json",
+      "core_sha256": "d77284e935ccb187e5d77d0bc78536958644dad6cdba26e400ce1e66a4c5b5c1",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "core/task_spec.schema.json",
+      "target_sha256": "20ba549d316b5179c9b16c3d34afed5d94a74467ed638ab726e7b8040c983e4c",
+      "core_path": "core/task_spec.schema.json",
+      "core_sha256": "20ba549d316b5179c9b16c3d34afed5d94a74467ed638ab726e7b8040c983e4c",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "core/project_manifest.schema.json",
+      "target_sha256": "eb22f41dbe8fd4081412a1b9c3e4814b1d552c580f7d1fd4d81210d73c751ab1",
+      "core_path": "core/project_manifest.schema.json",
+      "core_sha256": "eb22f41dbe8fd4081412a1b9c3e4814b1d552c580f7d1fd4d81210d73c751ab1",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "docs/agent_orchestration.md",
+      "target_sha256": "9e69e0e5a5420e01c3f5d47c4b0df46d57e7cc42fde94fc78975a90e13ba2f87",
+      "core_path": "docs/agent_orchestration.md",
+      "core_sha256": "9e69e0e5a5420e01c3f5d47c4b0df46d57e7cc42fde94fc78975a90e13ba2f87",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "requirements.txt",
+      "target_sha256": "0b1ad8cac01b4ae06d46147f3ae8f30627db49edc86aa0fcf2c0d0622870ece7",
+      "core_path": "requirements.txt",
+      "core_sha256": "0b1ad8cac01b4ae06d46147f3ae8f30627db49edc86aa0fcf2c0d0622870ece7",
+      "relationship": "exact_copy"
+    },
+    {
+      "target_path": "VERSION",
+      "target_sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+      "core_path": "VERSION",
+      "core_sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+      "relationship": "exact_copy"
+    }
+  ]
+}
