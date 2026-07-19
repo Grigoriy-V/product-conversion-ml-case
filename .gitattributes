@@ -1,0 +1,7 @@
+# Immutable experiment artifacts have recorded byte hashes; keep their historical EOLs.
+audit/online_shoppers_*.py text eol=lf
+reports/online_shoppers_*.md text eol=lf
+reports/online_shoppers_dataset_audit.json text eol=crlf
+reports/online_shoppers_baseline_results.json text eol=crlf
+reports/online_shoppers_model_comparison_results.json text eol=crlf
+reports/online_shoppers_final_evaluation_results.json text eol=crlf

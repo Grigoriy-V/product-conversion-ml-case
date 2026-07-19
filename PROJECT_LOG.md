@@ -205,3 +205,8 @@ test-driven change occurred. See `reports/online_shoppers_final_evaluation.md`
 and its JSON evidence. Worker recommends supervisor review; step 7 remains
 separate and requires product-need justification before calibration or
 threshold work.
+## 2026-07-19 — Online Shoppers step 7 train-only threshold analysis
+
+The fixed Random Forest completed one five-fold group-safe OOF run on 9,864 frozen training rows only: `.venv\Scripts\python.exe audit\online_shoppers_threshold_analysis.py --source data\online_shoppers_source\online_shoppers_intention.csv --membership data\frozen_splits\online_shoppers_conversion_v1_membership.csv --output reports\online_shoppers_threshold_analysis_results.json --report reports\online_shoppers_threshold_analysis.md`. Runtime: 2.6348409s.
+
+The pooled-OOF F2-selected threshold was 0.1273247 (F2 0.5833407, precision 0.2538032, recall 0.8636959); default 0.5 was F2 0.0726837, precision 0.5833333, recall 0.0596330. Recall >=0.50/0.60/0.70 points: thresholds 0.2447573/0.2163655/0.1827384; precision 0.3497537/0.3272597/0.2951857; recall 0.5117955/0.6002621/0.7031455. Calibration method: none. No frozen test row, prediction, metric, or final-test artifact was accessed. Events: `a5ffa0b0-3e29-4bf5-b7bd-70f132c2c75c`, `ec62f2e9-8653-4e8a-96f9-f82f4f3d1fa7`, `998d951c-0f73-4a8c-9560-86a7152a2940`.

@@ -1,0 +1,170 @@
+{
+  "calibration": {
+    "method": "none",
+    "performed": false,
+    "statement": "Raw RF scores support ranking and the train-OOF decision threshold only; they are not asserted calibrated probabilities."
+  },
+  "default_threshold_0_5": {
+    "balanced_accuracy": 0.5259186965391124,
+    "confusion_matrix_labels_false_true": [
+      [
+        8273,
+        65
+      ],
+      [
+        1435,
+        91
+      ]
+    ],
+    "f1": 0.10820451843043995,
+    "f2": 0.07268370607028754,
+    "precision": 0.5833333333333334,
+    "predicted_positive": 156,
+    "predicted_positive_rate": 0.015815085158150853,
+    "recall": 0.05963302752293578,
+    "threshold": 0.5
+  },
+  "model": {
+    "class": "sklearn.ensemble.RandomForestClassifier",
+    "params": {
+      "min_samples_leaf": 2,
+      "n_estimators": 200,
+      "n_jobs": -1,
+      "random_state": 20260719
+    }
+  },
+  "oof_ranking_metrics": {
+    "average_precision": 0.3758911618099474,
+    "roc_auc": 0.7783242694706953
+  },
+  "protocol": {
+    "excluded_features": [
+      "Revenue",
+      "PageValues"
+    ],
+    "fold_checks": {
+      "fold_validation_class_counts": {
+        "0": {
+          "FALSE": 1668,
+          "TRUE": 305
+        },
+        "1": {
+          "FALSE": 1667,
+          "TRUE": 305
+        },
+        "2": {
+          "FALSE": 1668,
+          "TRUE": 305
+        },
+        "3": {
+          "FALSE": 1667,
+          "TRUE": 306
+        },
+        "4": {
+          "FALSE": 1668,
+          "TRUE": 305
+        }
+      },
+      "group_isolation": true,
+      "validation_coverage_once": true
+    },
+    "membership_sha256": "8dd85409ff57638ed5a8197cb2d0fe5d1d13ff90c59b6dbd83e08c475e2deee1",
+    "n_folds": 5,
+    "source_sha256": "b3055ee355f59134d851d32641183cb4a8b45def7124d2f50442a042f358e0d9",
+    "test_access": "No frozen test row, label, score, metric, or final-test artifact is read, materialized, predicted, or scored.",
+    "train_rows": 9864
+  },
+  "recall_constrained_operating_points": {
+    "recall_at_least_0.50": {
+      "balanced_accuracy": 0.6688265318472769,
+      "confusion_matrix_labels_false_true": [
+        [
+          6886,
+          1452
+        ],
+        [
+          745,
+          781
+        ]
+      ],
+      "f1": 0.415536046820963,
+      "f2": 0.4683939066810603,
+      "precision": 0.3497536945812808,
+      "predicted_positive": 2233,
+      "predicted_positive_rate": 0.22637875101378752,
+      "recall": 0.5117955439056356,
+      "threshold": 0.24475733809633327
+    },
+    "recall_at_least_0.60": {
+      "balanced_accuracy": 0.6872142949882536,
+      "confusion_matrix_labels_false_true": [
+        [
+          6455,
+          1883
+        ],
+        [
+          610,
+          916
+        ]
+      ],
+      "f1": 0.4235838150289017,
+      "f2": 0.5144333370773897,
+      "precision": 0.3272597356198642,
+      "predicted_positive": 2799,
+      "predicted_positive_rate": 0.28375912408759124,
+      "recall": 0.6002621231979031,
+      "threshold": 0.21636547576917897
+    },
+    "recall_at_least_0.70": {
+      "balanced_accuracy": 0.6979387742078067,
+      "confusion_matrix_labels_false_true": [
+        [
+          5776,
+          2562
+        ],
+        [
+          453,
+          1073
+        ]
+      ],
+      "f1": 0.41581088936252664,
+      "f2": 0.5508779135434849,
+      "precision": 0.2951856946354883,
+      "predicted_positive": 3635,
+      "predicted_positive_rate": 0.3685117599351176,
+      "recall": 0.7031454783748362,
+      "threshold": 0.1827383751263708
+    }
+  },
+  "selected_operating_point": {
+    "balanced_accuracy": 0.6994780956740241,
+    "confusion_matrix_labels_false_true": [
+      [
+        4463,
+        3875
+      ],
+      [
+        208,
+        1318
+      ]
+    ],
+    "f1": 0.392320285756809,
+    "f2": 0.5833407099229884,
+    "precision": 0.25380319661082223,
+    "predicted_positive": 5193,
+    "predicted_positive_rate": 0.5264598540145985,
+    "recall": 0.8636959370904325,
+    "threshold": 0.12732469480624117
+  },
+  "selection_rule": {
+    "beta": 2.0,
+    "objective": "maximize pooled train-only OOF F2",
+    "portfolio_assumption": "F2 prioritizes missed conversions for illustration, not a production cost function.",
+    "tie_breakers": [
+      "higher recall",
+      "higher precision",
+      "higher threshold"
+    ]
+  },
+  "total_runtime_seconds": 2.6348408999620005
+}
