@@ -5,5 +5,8 @@ Adapter type: `classical_ml`.
 The scaffold is accepted and frozen. The no-ML Luna/Terra/supervisor
 portability lifecycle is also accepted.
 
-Next exact action: umbrella/superchat verification across the multi-repository
-workspace. Dataset audit is not yet authorized.
+The umbrella/superchat smoke is accepted.
+
+Automatic Core sync apply remains deferred technical debt in Core v0.1; only
+non-mutating dry-run is supported. Dataset audit remains gated until the
+canonical migration plan makes the post-lessons-promotion/Core-freeze decision.

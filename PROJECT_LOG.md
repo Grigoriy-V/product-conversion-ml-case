@@ -53,3 +53,13 @@ validators. See `reports/portability_smoke.md`. Dataset audit remains gated.
 
 Supervisor accepted the Luna retry and Terra smoke. The next action is
 umbrella/superchat verification; dataset work remains gated.
+
+## 2026-07-19 — Umbrella/superchat smoke
+
+Read-only discovery of the three repositories and target-only write isolation
+passed. Core sync dry-runs were non-mutating; `--apply` remains intentionally
+unavailable. See `reports/umbrella_superchat_smoke.md`.
+
+Supervisor accepted the umbrella smoke in event
+`ffca0da0-8fb2-4c88-81fd-e4597e13e57c`. Automatic sync apply remains deferred
+technical debt; dataset audit is still gated.
