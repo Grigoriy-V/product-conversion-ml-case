@@ -5,7 +5,7 @@
 The `classical_ml` scaffold is accepted and frozen. No dataset, model, or ML
 operation has run.
 
-Next exact action: no-ML portability lifecycle smoke — Luna deterministic
-inspection, Terra scaffold/schema validation, then supervisor review. After
-that, verify the umbrella/superchat workflow. Dataset audit remains gated and
-must not start yet.
+The no-ML Luna/Terra/supervisor portability lifecycle is accepted.
+
+Next exact action: umbrella/superchat verification across the multi-repository
+workspace. Dataset audit remains gated and must not start yet.

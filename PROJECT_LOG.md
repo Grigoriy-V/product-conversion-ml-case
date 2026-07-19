@@ -45,3 +45,11 @@ Supervisor acceptance event:
 `751619d1-93d8-4fff-902f-f2c796f08d63`. The next milestone is the no-ML
 Luna/Terra/supervisor portability lifecycle, then umbrella/superchat
 verification. Dataset audit remains gated.
+
+## 2026-07-19 — Terra portability smoke
+
+The no-ML Terra scaffold/schema portability smoke passed 25 tests and all
+validators. See `reports/portability_smoke.md`. Dataset audit remains gated.
+
+Supervisor accepted the Luna retry and Terra smoke. The next action is
+umbrella/superchat verification; dataset work remains gated.
